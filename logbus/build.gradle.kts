@@ -19,7 +19,7 @@ kotlin {
     }
 
     androidLibrary {
-        namespace = "com.github.umangtapania.logbus"
+        namespace = "io.github.umangtapania.logbus"
         compileSdk = libs.versions.android.compileSdk.get().toInt()
         minSdk = libs.versions.android.minSdk.get().toInt()
 
