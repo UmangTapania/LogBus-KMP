@@ -11,7 +11,7 @@ package io.github.umangtapania.logbus
  * - [AsyncLogRoute] — suspending I/O (file, network). Runs on the bus's background worker, so the
  *   caller never waits and a slow route can't hold up the others.
  *
- * Everything before [emit] is shared and lives here: the [isLoggable] filter and the optional
+ * Everything before `emit` is shared and lives here: the [isLoggable] filter and the optional
  * [formatter] step, applied in a fixed order by each member's `log`: [isLoggable] → [format] → `emit`.
  * Because `log` runs the whole pipeline itself, a route works on its own with no bus — just call
  * `route.log(event)`. The bus is only a fan-out over many routes' `log()`.
