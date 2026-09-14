@@ -1,5 +1,9 @@
 # LogBus
 
+[![Maven Central](https://img.shields.io/maven-central/v/io.github.umangtapania/logbus)](https://central.sonatype.com/artifact/io.github.umangtapania/logbus)
+[![License](https://img.shields.io/badge/license-Apache%202.0-blue)](./LICENSE)
+[![Platforms](https://img.shields.io/badge/platforms-Android%20%7C%20iOS-lightgrey)](#install)
+
 A small logging library for Kotlin Multiplatform, targeting Android and iOS.
 
 LogBus is a **bus**. You build one with a list of routes, then log to it. The bus turns each call
@@ -15,9 +19,6 @@ bus.e("upload failed", tag = "Sync", error = exception)
 ```
 
 ## Install
-
-> Not yet published. `0.1.0` is in preparation — these coordinates will work once it is on
-> Maven Central.
 
 ```toml
 # gradle/libs.versions.toml
@@ -136,7 +137,8 @@ val bus = LogBus(routes = listOf(
 ))
 ```
 
-The interface is there; no concrete formatters ship yet.
+LogBus has no built-in formatters — you write the one your project needs. A route with no formatter
+passes the raw message straight through.
 
 ## Interceptors
 
