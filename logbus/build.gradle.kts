@@ -9,8 +9,9 @@ kotlin {
     explicitApi()
 
     listOf(
-        iosArm64(),
-        iosSimulatorArm64()
+        iosX64(),               // Intel Mac simulator
+        iosArm64(),             // device
+        iosSimulatorArm64()     // Apple Silicon simulator
     ).forEach { iosTarget ->
         iosTarget.binaries.framework {
             baseName = "LogBus"
